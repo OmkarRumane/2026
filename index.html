@@ -1,0 +1,471 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>For you Bala ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <style>
+        :root {
+            --primary-pink: #ff4d6d;
+            --overlay: rgba(0, 0, 0, 0.55); /* Slightly darker for better text readability */
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #0d0d0d;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #envelope-wrapper { 
+            text-align: center; 
+            cursor: pointer; 
+            z-index: 30; 
+            animation: fadeIn 1.5s ease;
+        }
+
+        .heart-icon { 
+            font-size: 85px; 
+            animation: beat 1.2s infinite; 
+            filter: drop-shadow(0 0 15px var(--primary-pink)); 
+            margin-bottom: 20px;
+        }
+        
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .entry-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: white;
+            text-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
+        }
+
+        .sub-text {
+            letter-spacing: 4px; 
+            font-weight: 300; 
+            font-size: 0.7rem; 
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .section {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            z-index: 10;
+        }
+
+        /* Update these image URLs with your actual photos */
+        #apology-note { background-image: linear-gradient(var(--overlay), var(--overlay)), url('your-image-apology.jpg'); }
+        #content { background-image: linear-gradient(var(--overlay), var(--overlay)), url('your-image-1.jpg'); }
+        #personal-note { background-image: linear-gradient(var(--overlay), var(--overlay)), url('your-image-2.jpg'); }
+
+        .inner-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10%;
+            box-sizing: border-box;
+            animation: fadeIn 1.2s ease;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        h1 { 
+            font-family: 'Great Vibes', cursive; 
+            font-size: clamp(2.5rem, 10vw, 4rem); 
+            margin-bottom: 10px; 
+            text-shadow: 0 0 15px rgba(0,0,0,0.8); 
+        }
+
+        p { 
+            font-size: clamp(1rem, 4.2vw, 1.1rem); 
+            line-height: 1.6; 
+            max-width: 450px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,1);
+            margin-bottom: 15px;
+        }
+
+        .next-btn {
+            margin-top: 20px;
+            padding: 12px 35px;
+            background: var(--primary-pink);
+            border: none;
+            color: white;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+        }
+
+        .next-btn:active { transform: scale(0.95); }
+
+        .heart { 
+            position: fixed; bottom: -10%; font-size: 20px; 
+            animation: float 4s linear infinite; opacity: 0.7; z-index: 20;
+        }
+        @keyframes float { to { transform: translateY(-120vh) rotate(360deg); opacity: 0; } }
+    </style>
+</head>
+<body>
+
+    <div id="envelope-wrapper" onclick="startJourney()">
+        <div class="entry-text"></div>
+        <div class="heart-icon">❤️</div>
+        <div class="sub-text">Click to Begin, My Love</div>
+    </div>
+
+    <div id="apology-note" class="section">
+        <div class="inner-content">
+            <h1>Please he vachh...</h1>
+            <p>Pudhe janya adhi mala tula sorry manich aahe, I am SORRY Bala, sorry for everything, jheva hi mi tujhya sobat navto, jheva mi tula kahi bollo tujhyavr ragg kela. Saglya sathi sorry. Bala ik mi sorry navto manat jasta pn asa kadhich navta ki mala majhi chukk navti kalat. Mi fakt try karicho sorry mannayachya peksha mi majhi chukk kashi thik karu shakto ani tula kasa khush karu shakto.
+                </p>
+            <p>Ani hoo THANK YOU for everything, Tu aahes tr mi aahe Bala, I Love you Bala ❤️ and kahi hi hou mi asach prem karat rahnar aahe tujhya vr.</p>
+            <button class="next-btn" onclick="showNewYear()">Let's go ahead now ❤️</button>
+        </div>
+    </div>
+
+    <div id="content" class="section">
+        <div class="inner-content">
+            <h1>Happy New Year, Bala❤️</h1>
+            <p>I pray and I wish that you get everything that you want and everything that you deserve. Gondas baal majha. </p>
+            <button class="next-btn" onclick="showFinalNote()">One Last Thing</button>
+        </div>
+    </div>
+
+    <div id="personal-note" class="section">
+        <div class="inner-content">
+            <h1>Always You</h1>
+            <p>Tu khush rha fakt ani sarkha hassat rha. Mala na kharach kahi nakoi fakt I want you to be happy always no matter what that means.....</p>
+            <p>Mi tujhya sathi nehmi asel. I love you forever ❤️</p>
+            <p style="font-family: 'Great Vibes'; font-size: 2.8rem; color: var(--primary-pink); margin-top: 20px;">
+                Tujha Omkii
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Start the journey - Shows Apology first
+        function startJourney() {
+            document.getElementById('envelope-wrapper').style.display = 'none';
+            document.getElementById('apology-note').style.display = 'block';
+            
+            // Start the floating hearts
+            setInterval(createHeart, 400);
+        }
+
+        // Move to New Year Wish
+        function showNewYear() {
+            document.getElementById('apology-note').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+            
+            // Celebration confetti for the New Year wish
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ['#ff4d6d', '#ffffff']
+            });
+        }
+
+        // Move to Final Note
+        function showFinalNote() {
+            document.getElementById('content').style.display = 'none';
+            document.getElementById('personal-note').style.display = 'block';
+            confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+        }
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + "vw";
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>For you Bala ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <style>
+        :root {
+            --primary-pink: #ff4d6d;
+            --overlay: rgba(0, 0, 0, 0.55);
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #0d0d0d;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Music Toggle Button */
+        #music-control {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: none; /* Hidden until journey starts */
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        #envelope-wrapper { 
+            text-align: center; 
+            cursor: pointer; 
+            z-index: 30; 
+            animation: fadeIn 1.5s ease;
+        }
+
+        .heart-icon { 
+            font-size: 85px; 
+            animation: beat 1.2s infinite; 
+            filter: drop-shadow(0 0 15px var(--primary-pink)); 
+            margin-bottom: 20px;
+        }
+        
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .entry-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: white;
+            text-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
+        }
+
+        .sub-text {
+            letter-spacing: 4px; 
+            font-weight: 300; 
+            font-size: 0.7rem; 
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .section {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            z-index: 10;
+        }
+
+        /* Update these image URLs with your actual photos */
+        #apology-note { background-image: linear-gradient(var(--overlay), var(--overlay)), url('your-image-apology.jpg'); }
+        #content { background-image: linear-gradient(var(--overlay), var(--overlay)), url('your-image-1.jpg'); }
+        #personal-note { background-image: linear-gradient(var(--overlay), var(--overlay)), url('your-image-2.jpg'); }
+
+        .inner-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10%;
+            box-sizing: border-box;
+            animation: fadeIn 1.2s ease;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        h1 { 
+            font-family: 'Great Vibes', cursive; 
+            font-size: clamp(2.5rem, 10vw, 4rem); 
+            margin-bottom: 10px; 
+            text-shadow: 0 0 15px rgba(0,0,0,0.8); 
+        }
+
+        p { 
+            font-size: clamp(1rem, 4.2vw, 1.1rem); 
+            line-height: 1.6; 
+            max-width: 450px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,1);
+            margin-bottom: 15px;
+        }
+
+        .next-btn {
+            margin-top: 20px;
+            padding: 12px 35px;
+            background: var(--primary-pink);
+            border: none;
+            color: white;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+        }
+
+        .next-btn:active { transform: scale(0.95); }
+
+        .heart { 
+            position: fixed; bottom: -10%; font-size: 20px; 
+            animation: float 4s linear infinite; opacity: 0.7; z-index: 20;
+        }
+        @keyframes float { to { transform: translateY(-120vh) rotate(360deg); opacity: 0; } }
+    </style>
+</head>
+<body>
+
+    <audio id="bg-music" loop>
+        <source src="music.mpeg" type="audio/mpeg">
+    </audio>
+
+    <div id="music-control" onclick="toggleMusic()">🔊</div>
+
+    <div id="envelope-wrapper" onclick="startJourney()">
+        <div class="entry-text"></div>
+        <div class="heart-icon">❤️</div>
+        <div class="sub-text">Click to Begin, My Love</div>
+    </div>
+
+    <div id="apology-note" class="section">
+        <div class="inner-content">
+            <h1>Please he vachh...</h1>
+            <p>Pudhe janya adhi mala tula sorry manich aahe, I am SORRY Bala, sorry for everything, jheva hi mi tujhya sobat navto, jheva mi tula kahi bollo tujhyavr ragg kela. Saglya sathi sorry. Bala ik mi sorry navto manat jasta pn asa kadhich navta ki mala majhi chukk navti kalat. Mi fakt try karicho sorry mannayachya peksha mi majhi chukk kashi thik karu shakto ani tula kasa khush karu shakto.</p>
+            <p>Ani hoo THANK YOU for everything, Tu aahes tr mi aahe Bala, I Love you Bala ❤️ and kahi hi hou mi asach prem karat rahnar aahe tujhya vr.</p>
+            <button class="next-btn" onclick="showNewYear()">Let's go ahead now ❤️</button>
+        </div>
+    </div>
+
+    <div id="content" class="section">
+        <div class="inner-content">
+            <h1>Happy New Year, Bala❤️</h1>
+            <p>I pray and I wish that you get everything that you want and everything that you deserve. Gondas baal majha. </p>
+            <button class="next-btn" onclick="showFinalNote()">One Last Thing</button>
+        </div>
+    </div>
+
+    <div id="personal-note" class="section">
+        <div class="inner-content">
+            <h1>Always You</h1>
+            <p>Tu khush rha fakt ani sarkha hassat rha. Mala na kharach kahi nakoi fakt I want you to be happy always no matter what that means.....</p>
+            <p>Mi tujhya sathi nehmi asel. I love you forever ❤️</p>
+            <p style="font-family: 'Great Vibes'; font-size: 2.8rem; color: var(--primary-pink); margin-top: 20px;">
+                Tujha Omkii
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const music = document.getElementById('bg-music');
+        const musicBtn = document.getElementById('music-control');
+
+        function startJourney() {
+            // Play Music
+            music.play().catch(e => console.log("Audio playback failed:", e));
+            musicBtn.style.display = 'flex'; // Show mute button
+
+            document.getElementById('envelope-wrapper').style.display = 'none';
+            document.getElementById('apology-note').style.display = 'block';
+            
+            // Start the floating hearts
+            setInterval(createHeart, 400);
+        }
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                musicBtn.innerHTML = '🔊';
+            } else {
+                music.pause();
+                musicBtn.innerHTML = '🔇';
+            }
+        }
+
+        function showNewYear() {
+            document.getElementById('apology-note').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+            
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ['#ff4d6d', '#ffffff']
+            });
+        }
+
+        function showFinalNote() {
+            document.getElementById('content').style.display = 'none';
+            document.getElementById('personal-note').style.display = 'block';
+            confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+        }
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + "vw";
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+    </script>
+</body>
+</html>
